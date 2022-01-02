@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+  color:white ;
+ 
+}
+
+a:link{
+  text-decoration: none;
+  color: #000;
+}
+h2{
+  color: whitesmoke;
+}
+.home{
+  margin-top: 5%;
+}
+.weather-city{
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+ 
+}
+.cities{
+width: 200px;
+height: 100px;
+background-color: rgba(0, 0, 0, 0.76);
+border-radius: 5px;
+
+}
+.detail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh
+}
+.weather-detail{
+  width: 400px;
+height: 300px;
+background-color: rgba(0, 0, 0, 0.76);
+border-radius: 5px;
+}

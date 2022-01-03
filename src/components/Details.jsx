@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import { FaArrowLeft } from 'react-icons/fa'
+import { FaArrowLeft } from 'react-icons/fa';
+import useSound from "use-sound";
 const API_key="389b6125cad44d5cb7e211518212812";
+
 const Weather= props =>
-{  
+{  const [play] = useSound(
+    "http://codeskulptor-demos.commondatastorage.googleapis.com/pang/pop.mp3"
+  );
     
     const {Name}= useParams();
     const [location, SetLocation ]=useState(Name);
@@ -47,7 +51,7 @@ const Weather= props =>
     <h3>{weather.localtime}</h3>
     <img src={weather.icon} alt='icon'/>
     <br/>
-    <Link to="/"><FaArrowLeft style={{color:"yellow",fontSize:"3rem"}}/></Link>
+    <Link to="/"><FaArrowLeft onClick={play()} style={{color:"yellow",fontSize:"3rem"}}/></Link>
     </div>
     </div>
     )

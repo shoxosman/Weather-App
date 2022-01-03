@@ -3,7 +3,7 @@ import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
 import useSound from "use-sound";
-const API_key="389b6125cad44d5cb7e211518212812";
+const API_KEY="e218b9fde1344226a77164605220101";
 
 const Weather= props =>
 {  const [play] = useSound(
@@ -27,7 +27,7 @@ const Weather= props =>
    console.log(cityName());
     const updateWeather= async () =>
     {
-        const response= await fetch(`http://api.weatherapi.com/v1/current.json?key=${API_key}&q=${location}&aqi=no`)
+        const response= await fetch(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location}&aqi=no`)
         const data = await response.json();
          const newWeather= 
          {
